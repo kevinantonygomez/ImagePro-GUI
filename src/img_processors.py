@@ -106,7 +106,6 @@ def saturate(img_bgr:np.ndarray, value:float) -> np.ndarray:
     Returns:
       np.ndarray: Saturated image
     '''
-    print( "sat", type(value))
     hsv = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2HSV)
     h, s, v = cv2.split(hsv)
     s = cv2.multiply(s, value)  # Scale saturation
